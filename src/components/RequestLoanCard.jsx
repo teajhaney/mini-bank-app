@@ -72,7 +72,7 @@ const RequestLoanCard = () => {
             <p className="mb-4">
               A loan of{" "}
               <span className="font-bold">${Number(loanValue).toFixed(2)}</span>{" "}
-              was requested <span className="font-bold">{fromValue}</span>?, do
+              was requested by <span className="font-bold">{fromValue}</span>?, do
               you wanna approve the laon?{" "}
             </p>
             <div className="flex justify-end gap-4">
