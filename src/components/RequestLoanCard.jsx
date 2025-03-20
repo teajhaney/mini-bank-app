@@ -68,7 +68,7 @@ const RequestLoanCard = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="bg-white p-6 rounded-lg shadow-lg">
+            className="bg-white p-6 rounded-lg hadow-[0px_0px_5px_3px_rgba(0,0,0,0.1)] w-11/12 max-w-md md:w-1/2 lg:w-1/3">
             <p className="mb-4">
               A loan of{" "}
               <span className="font-bold">${Number(loanValue).toFixed(2)}</span>{" "}
