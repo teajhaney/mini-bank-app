@@ -34,7 +34,7 @@ const TransactionList = () => {
     setTransactionToDelete(null);
   };
   return (
-    <div className="w-full h-52 lg:h-full   rounded overflow-y-scroll [&::-webkit-scrollbar]:hidden">
+    <div className="w-full h-62 lg:h-[900px]   rounded overflow-y-scroll [&::-webkit-scrollbar]:hidden">
       {transactions.length > 0 ? (
         transactions
           .map((transaction) => (

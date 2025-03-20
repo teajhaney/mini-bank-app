@@ -35,14 +35,14 @@ const TransferCard = () => {
   return (
     <div className="h-fit w-full border   rounded flex flex-col items-start gap-2 p-2">
       <h1 className="text-2xl">Transfer</h1>
-      <div className="flex justify-between w-full">
+      <div className="flex flex-col lg:flex-row gap-2 justify-between w-full">
         <input
           value={transferValue}
           onChange={(e) => setTransferValue(e.target.value)}
           type="text"
           className="bg-white rounded border"
         />
-        <div className="flex gap-2">
+        <div className="flex  flex-col lg:flex-row gap-2">
           {" "}
           <h1>to:</h1>
           <input

@@ -39,14 +39,14 @@ const RequestLoanCard = () => {
   return (
     <div className="h-fit w-full border   rounded flex flex-col items-start gap-2 p-2">
       <h1 className="text-2xl">Request a Loan</h1>
-      <div className="flex justify-between w-full">
+      <div className="flex  flex-col lg:flex-row gap-2 justify-between w-full">
         <input
           value={loanValue}
           onChange={(e) => setLoanValue(e.target.value)}
           type="text"
           className="bg-white rounded border "
         />
-        <div className="flex gap-2">
+        <div className="flex  flex-col lg:flex-row gap-2">
           {" "}
           <h1>from:</h1>
           <input
