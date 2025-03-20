@@ -3,10 +3,14 @@ import { useStateContext } from "../constext/useStateContext";
 
 const WithdrawCard = () => {
   const [withdrawValue, setWithdrawValue] = useState("");
-  const { addTotransaction } = useStateContext();
+  const { addTotransaction, accountBalance } = useStateContext();
 
   const handleButtonClick = () => {
-    if (withdrawValue && !isNaN(withdrawValue)) {
+    if (
+      withdrawValue &&
+      !isNaN(withdrawValue) &&
+      accountBalance >= withdrawValue
+    ) {
       addTotransaction({
         amount: withdrawValue,
         label: "Withdraw",

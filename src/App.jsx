@@ -42,11 +42,13 @@ function App() {
           {/* bank transactions */}
           <div className=" shadow-[0px_0px_5px_3px_rgba(0,0,0,0.1)] rounded h-full w-full p-2 flex flex-col gap-2">
             {/* accout balance */}
-            <div className="h-20 w-full border border-black rounded flex justify-between p-2">
+            <div className="h-fit w-full border border-black rounded flex justify-between p-2">
               <h1>Accont balance:</h1>
-              <h1 className="txt-3xl not-last:lg:text-5xl font-semibold">
-                ${formattedBalance}
-              </h1>
+              <div className="max-w-62 600 lg:max-w-110">
+                <h1 className="txt-3xl lg:text-5xl font-semibold break-all">
+                  ${formattedBalance}
+                </h1>
+              </div>
             </div>
             {/* perform transactions */}
             <div className="flex flex-col md:flex-row lg:flex-col gap-2  ">

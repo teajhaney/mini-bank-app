@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { StateContext } from "./useStateContext";
 
 export const ContextProvider = ({ children }) => {
+  const balance=100000
   //load cart from local storage if available or set empty cart
   const [transactions, setTransactions] = useState(() => {
     const storedTransaction = localStorage.getItem("transactions");
@@ -9,9 +10,8 @@ export const ContextProvider = ({ children }) => {
   });
   const [accountBalance, setAccountBalance] = useState(() => {
     const storedAccountBalance = localStorage.getItem("accountBalance");
-    return storedAccountBalance ? Number(storedAccountBalance) : 100000;
+    return storedAccountBalance ? Number(storedAccountBalance) : balance;
   });
-
 
   useEffect(() => {
     localStorage.setItem("transactions", JSON.stringify(transactions));
@@ -20,7 +20,6 @@ export const ContextProvider = ({ children }) => {
 
   //   transaction count
   const transactionsCount = transactions.length;
-
 
   const addTotransaction = ({ amount, label, to, from }) => {
     const newTransaction = {
@@ -70,16 +69,14 @@ export const ContextProvider = ({ children }) => {
   const resetAccount = () => {
     localStorage.clear();
     setTransactions([]);
-    setAccountBalance(100000);
+    setAccountBalance(balance);
   };
 
-    const deleteTransaction = (transaction) => {
-      setTransactions((prevTransaction) =>
-        prevTransaction.filter((item) => item.id !== transaction.id)
-      );
-    };
-
-
+  const deleteTransaction = (transaction) => {
+    setTransactions((prevTransaction) =>
+      prevTransaction.filter((item) => item.id !== transaction.id)
+    );
+  };
 
   return (
     <StateContext.Provider

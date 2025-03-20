@@ -45,7 +45,7 @@ const TransactionList = () => {
               layout
               transition={{ duration: 0.5 }}
               key={transaction.id}
-              className="mb-2 p-2 bg-gray-100  flex flex-col gap-2 rounded">
+              className="mb-2 p-2 bg-gray-100  flex flex-col gap-2 rounded h-fit">
               <div className="flex flex-col gap-2">
                 <div className="flex justify-between">
                   <p
@@ -68,7 +68,7 @@ const TransactionList = () => {
                     {transaction.to && <p>To: {transaction.to}</p>}
                     {transaction.from && <p>From: {transaction.from}</p>}
                   </div>
-                  <p className="text-2xl font-bold">
+                  <p className="text-2xl font-bold  max-w-50 break-all">
                     ${Number(transaction.amount).toFixed(2)}
                   </p>
                 </div>
