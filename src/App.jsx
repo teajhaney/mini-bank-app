@@ -49,7 +49,7 @@ function App() {
               </h1>
             </div>
             {/* perform transactions */}
-            <div className="flex  gap-2 ">
+            <div className="flex flex-col md:flex-row lg:flex-col gap-2  ">
               <WithdrawCard />
               <DepositCard />
             </div>
