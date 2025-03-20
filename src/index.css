@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-blue: oklch(0.69 0.15 264.99);  /* Blue */
+  --color-green: oklch(0.76 0.12 142.11); /* Green */
+  --color-red: oklch(0.62 0.15 29.24);    /* Red */
+  --color-yellow: oklch(0.88 0.12 100.0); /* Yellow */
+  --color-purple: oklch(0.65 0.20 270.0); /* Purple */
+  --color-orange: oklch(0.85 0.20 30.0);  /* Orange */
+   --color-gray: oklch(0.63 0 0); /* Neutral Gray */
+}     
