@@ -45,7 +45,7 @@ function App() {
             <div className="h-fit w-full border border-black rounded flex justify-between p-2">
               <h1>Accont balance:</h1>
               <div className="max-w-62 600 lg:max-w-110">
-                <h1 className="txt-3xl lg:text-5xl font-semibold break-all">
+                <h1 className="text-3xl lg:text-5xl font-semibold break-all">
                   ${formattedBalance}
                 </h1>
               </div>
